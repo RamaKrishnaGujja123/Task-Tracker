@@ -1,4 +1,37 @@
 /* Search Bar Styles */
+/* General Responsive Design */
+@media (max-width: 768px) {
+    .search-bar input {
+      width: 80%;
+    }
+  
+    .task-list {
+      padding: 10px;
+    }
+  
+    .task-item {
+      margin-bottom: 15px;
+    }
+  
+    .task-item button {
+      padding: 10px;
+    }
+  }
+  
+  /* Extra small devices (portrait phones, less than 576px) */
+  @media (max-width: 576px) {
+    .search-bar input {
+      width: 90%;
+    }
+  
+    .task-list {
+      padding: 5px;
+    }
+  
+    .task-item button {
+      font-size: 0.9rem;
+    }
+  }
 .search-bar {
     display: flex;
     justify-content: center;

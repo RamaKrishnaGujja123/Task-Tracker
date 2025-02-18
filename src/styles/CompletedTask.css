@@ -1,0 +1,33 @@
+.completed-tasks {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+  
+.completed-tasks h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+  
+.task-item {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+  
+.task-item button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.task-item button:hover {
+    background-color: #45a049;
+}

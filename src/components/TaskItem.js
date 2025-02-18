@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const TaskItem = ({ task, editTask, updateTaskStatus, deleteTask }) => {
+const TaskItem = React.memo(({ task, editTask, updateTaskStatus, deleteTask }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [updatedTitle, setUpdatedTitle] = useState(task.title);
   const [updatedDescription, setUpdatedDescription] = useState(task.description);
@@ -57,6 +57,6 @@ const TaskItem = ({ task, editTask, updateTaskStatus, deleteTask }) => {
       )}
     </div>
   );
-};
+});
 
 export default TaskItem;
