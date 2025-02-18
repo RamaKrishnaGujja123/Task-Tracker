@@ -1,0 +1,17 @@
+/* Task List Styles */
+.task-list {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .task-list h2 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
