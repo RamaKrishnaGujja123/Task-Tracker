@@ -1,6 +1,7 @@
 import React from "react";
 import TaskItem from "./TaskItem";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import "../styles/TaskList.css";
 
 const TaskList = ({ tasks, editTask, updateTaskStatus, deleteTask }) => {
   const updateTaskOrder = (result) => {
@@ -17,9 +18,9 @@ const TaskList = ({ tasks, editTask, updateTaskStatus, deleteTask }) => {
     <DragDropContext onDragEnd={updateTaskOrder}>
       <Droppable droppableId="task-list">
         {(provided) => (
-          <ul ref={provided.innerRef} {...provided.droppableProps}>
+          <ul className="task-list" ref={provided.innerRef} {...provided.droppableProps}>
             {tasks.map((task, index) => (
-              <Draggable key={task.id} draggableId={task.id} index={index}>
+              <Draggable key={task.id} draggableId={task.id.toString()} index={index}>
                 {(provided) => (
                   <li ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
                     <TaskItem

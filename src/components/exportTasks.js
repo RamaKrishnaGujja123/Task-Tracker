@@ -1,4 +1,5 @@
 import { parse } from 'json2csv';
+import "../styles/exportTask.css";
 
 // Function to export tasks to CSV format
 const exportToCSV = (tasks) => {

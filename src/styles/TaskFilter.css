@@ -1,0 +1,31 @@
+/* Task Filter Styles */
+.task-filter {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .task-filter select {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .task-filter select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+  }
+  
+  .task-filter select:hover {
+    border-color: #2980b9;
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode .task-filter select {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border-color: #555;
+  }

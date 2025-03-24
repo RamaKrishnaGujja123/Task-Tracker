@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/Task.css';
 
 const TaskItem = React.memo(({ task, editTask, updateTaskStatus, deleteTask }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -37,17 +38,19 @@ const TaskItem = React.memo(({ task, editTask, updateTaskStatus, deleteTask }) =
             value={updatedDescription}
             onChange={(e) => setUpdatedDescription(e.target.value)}
           />
-          <button onClick={handleSave}>Save</button>
-          <button onClick={handleCancel}>Cancel</button>
+          <div className="task-actions">
+            <button onClick={handleSave}>Save</button>
+            <button onClick={handleCancel}>Cancel</button>
+          </div>
         </>
       ) : (
         <>
-          <h3>{task.title}</h3>
+          <h4>{task.title}</h4>
           <p>{task.dueDate && `Due: ${new Date(task.dueDate).toLocaleDateString()}`}</p>
           <p>{task.priority}</p>
           <p>{task.description}</p>
           <div className="task-actions">
-            <button onClick={() => handleEdit()}>Edit</button>
+            <button onClick={handleEdit}>Edit</button>
             <button onClick={() => updateTaskStatus(task.id, task.status === 'completed' ? 'pending' : 'completed')}>
               {task.status === 'completed' ? 'Mark as Pending' : 'Mark as Completed'}
             </button>

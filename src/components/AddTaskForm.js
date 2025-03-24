@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import '../styles/AddTaskForm.css';
 
 const AddTaskForm = ({ addTask }) => {
   const [title, setTitle] = useState("");
@@ -20,7 +21,8 @@ const AddTaskForm = ({ addTask }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="add-task-form" onSubmit={handleSubmit}>
+      <h2>Add New Task</h2>
       <input
         type="text"
         placeholder="Task Title"
@@ -32,7 +34,11 @@ const AddTaskForm = ({ addTask }) => {
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <DatePicker selected={dueDate} onChange={setDueDate} />
+      <DatePicker 
+        selected={dueDate} 
+        onChange={setDueDate} 
+        placeholderText="Select Due Date"
+      />
       <select value={priority} onChange={(e) => setPriority(e.target.value)}>
         <option value="Low">Low</option>
         <option value="Medium">Medium</option>

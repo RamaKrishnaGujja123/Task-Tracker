@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/TaskFilter.css';
 
 const TaskFilters = ({ setFilters }) => {
   const handleFilterChange = (e) => {
@@ -6,7 +7,7 @@ const TaskFilters = ({ setFilters }) => {
   };
 
   return (
-    <div>
+    <div className="task-filter">
       <select onChange={handleFilterChange}>
         <option value="all">All</option>
         <option value="completed">Completed</option>

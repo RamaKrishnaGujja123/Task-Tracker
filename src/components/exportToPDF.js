@@ -1,4 +1,5 @@
 import { jsPDF } from 'jspdf';
+import "../styles/exportToPDF.css";
 
 const exportToPDF = (tasks) => {
   const doc = new jsPDF();
